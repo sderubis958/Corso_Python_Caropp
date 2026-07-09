@@ -33,3 +33,20 @@ if email == input_email and password == input_password:
     print("Accesso consentito. Benvenuto!")
 elif email == "carotone.c@libero.it" and password == "PrimoAccesso.2026":    
     print("Accesso consentito. Benvenuto!")
+
+# ----------------------------------
+# Esempio di login
+email = 'antonella.r@gmail.com'
+password = 'Antonella@2026'
+
+utente = input("📧 Inserisci la mail: ")
+password_utente = input('🔐 Inserisci la password: ')
+
+if email == utente and password == password_utente:
+    print('Benvenuto nel sistema')
+elif email != utente:
+    print('📧 Verifica la mail') 
+elif password_utente != password:
+    print('⚠️ Password errato.\n Riprova')
+else:
+    print('Accesso negato')
