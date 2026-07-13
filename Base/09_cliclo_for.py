@@ -21,13 +21,38 @@
         Ciaooooo 😅
         Ciaooooo 😅
         Ciaooooo 😅
-    è lungo, ripetitivo e dificicle da modificare🤨
+    è lungo, ripetitivo e difficile da modificare🤨
     
     Con il ciclo for basta scrivere:
     
     for i in range(numero desiderato):
         stampa Ciaooooo 😅       
 """
+
+# (variable) i: int
+for i in range(10):
+    print( 'sono Roxana N°', i, '😅')
+
+
+"""
+    for     -> parola chiave che avvia il ciclo
+    i = 0   -> variabile del ciclo
+    in      -> significa "dentro"
+    range() -> genera un sequenza di numeri passato nel parametro
+    :       -> indica l'inizio del blocco
+    indentazione importente ricordatevi 🤣🤣🤣🤣🤣🤣🤣
+"""
+
+# Esempio 2: Range(inizio, fine)
+# for i in range(3, 9):
+#     print('numero =>', i)
+
+
+# Esempio 2: Range(inizio, fine, passo)
+for i in range(0, 11, 2):
+    print('numero =>', i)
+
+
 # (variable) i: int
 for i in range(10):
     print( 'sono Massa N°', i, '😅')

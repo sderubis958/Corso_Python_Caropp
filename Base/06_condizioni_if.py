@@ -5,6 +5,66 @@
     (ELSE) altrimenti fai quest'altro;
 
 """
+"""
+
+    Servono a prendere decizioni al programma
+    if(SE) else(altrimenti)
+    if condizione:
+        codie
+    else:
+        codice
+
+
+    if(SE) elif(altrimenti sé) else(altrimenti)
+    if condizione:
+        codie
+    elif condizione:
+        codice
+    elif condizione:
+        codice
+    elif condizione:
+        codice
+    else:
+        codice
+"""
+
+"""
+    Gli operatori di confronso sono
+    <; >; ==; <=; >=; !=;
+    
+    Gli operatori logici
+    AND(&&) OR(||) NOT(!)
+"""
+""" 
+   If Annidato in python
+
+    Sintassi base:
+    if condizione:
+        codice eseguito se la condizione è vera
+
+        if altra_condizione:
+            codice eseguito se anche seconda la condizione è vera
+        else:
+            codice eseguito se la seconda condizione è falsa
+    else:
+        codice eseguito se la prima condizione è falsa
+"""
+# Esempio 1 Maggiore età
+eta = int(input('Inserisci la tua età: '))
+patente = True
+
+if eta >= 18:
+    print('Sei maggiorenne.')
+
+    if patente:
+        print('Poi guidare...🚗')
+    else:
+        print('Non poi guidare perché non hai la patente...')
+else:
+    print('Sei minorenne!')
+
+# esempio 2 Voto scolastico
+
 voto = 85
 
 if voto >= 90:
@@ -16,6 +76,17 @@ elif voto >= 70:
 else:
     print("Voto: F \n- Hai bisogno di studiare di più.")
 # Usa il codice con cautela.
+voto: int = int(input('inserisci il voto: '))
+
+if voto >= 18:
+    print('hai superato l\'esame ')
+    if voto >= 30:
+        print('Complimenti! Hai superato l\'esame con il massimo dei voti')
+    else :
+        print('Promosso! con un voto', voto)
+else :
+    print('Non ammesso! perché hai ottenuto un punteggio di', voto)
+
 
 # esempio di login
 input_email = input("Inserisci la tua email: ")

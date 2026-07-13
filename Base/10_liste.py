@@ -11,6 +11,18 @@ mia_lista= ["Mela", "Banana", "Pera", "Arancia", "Kiwi"] # definizione di una li
 # Creazione della lista
             # 0      1        2         3          4 
 colori = ['Rosso', 'Verde', 'Blu', 'Giallo', 'Viola'] # definizione di una lista    
+# Stampa della lista
+print(mia_lista, '\n\n')
+
+# Accedere ad un elemento della lista
+print(colori[1]) # select nome from colori where id = 1
+
+# Modificare un elemento della lista
+mia_lista[1] = 'Kiwi' # UPDATE ... set nome = ..
+print(mia_lista)
+
+
+print('=' * 40, '\n')
 
 print(mia_lista, '\n\n') # stampa la lista
 print(colori) # stampa la lista
@@ -23,16 +35,17 @@ print(colori) # stampa la lista
 
 
 # Lunghezza della lista 
-studenti = ['Massa', 'Anntonella', 'Luigi', 'Eduardo', 'Matteo', 'Stefano', 'Lucia', 'Annaritantonia', 'Paolo']
+studenti = ['Massa', 'Antonella', 'Luigi', 'Eduardo', 'Matteo', 'Stefano', 'Lucia', 'Annaritantonia', 'Paolo']
 print('=' * 30, '\n') # genera 70 ================================================
 print(f"Numero di studenti: {len(studenti)}")
 print('=' * 30, '\n') # genera 70
 
 # aggiungere uno o più elementi alla lista
-voti: int = []
+voti = []
 
-voti.append(10) # aggiunge un elemento alla lista
-voti.extend([20, 30, 40, 50]) # aggiunge più elementi alla lista
+voti.append(10) # aggiunge un elemento alla lista # INSERT INTO tabella (ore) values (10)
+voti.extend([20, 30, 40, 50]) # aggiunge più elementi alla lista # INSERT INTO tabella (ore) values (10) (20), (30), (40), (50)
+
 print ('lista dei voti:', voti, '\n') # stampa la lista
 
 frutti = ['Mela', 'Banana', 'Pera', 'Arancia', 'Kiwi'] # definizione di una lista
@@ -50,7 +63,8 @@ print(studenti) # stampa la lista
 # svuotare la lista
 utenti = ['Massa', 'Anntonella', 'Luigi', 'Eduardo', 'Matteo', 'Stefano', 'Lucia', 'Annaritantonia', 'Paolo']
 print(utenti,'\n', 'Prima della cancellazione') # stampa la lista
-utenti.clear() # elimina tutti gli elementi della lista
+utenti.clear() # elimina tutti gli elementi della lista - DELETE utenti (elimina lista)
+
 print('***Lista vuota ***', utenti) # stampa la lista
 
 for i in range(len(studenti)):
