@@ -1,0 +1,25 @@
+da riunione teams del 02/02/2026 ore 17:30
+
+l dubbio sul Geofencing per TITULUS (ed in generale per Openshift) è emerso perché:
+ 
+Giuseppe Zonda ci ha di recente detto che per il geofencing utilizzate una lista di reti in whitelist (circa 90k entry). Purtroppo questa quantità di entry non è gestibile con i security group AWS.
+Sul tavolo di design OCP si è deciso di non usare ALB per evitare di dover gestire i cert. anche su AWS. Questo comporta l'utilizzo di NLB, che per loro natura non supportano AWS WAF.
+In assenza di AWS WAF ci stiamo interrogando su quale possa essere la strada per avere il geofencing sui cluster OCP
+ 
+Abbiamo discusso negli scorsi giorni le possibili soluzioni che ti riporto di seguito:
+ 
+ 
+Soluzioni che NON richiedono la gestione dei certificati su AWS/siti terzi:
+AWS Network Firewall
+Consentirebbe di gestire le regole di ingresso col minimo impatto in termini di tempi di delivery OCP TITULUS. Al momento è l'unica soluzione che non comporterebbe ritardi sullo stream di progetto.
+[ @Giuseppe Zonda] Per determinare l'impatto economico di questa scelta avremmo bisogno di sapere quanto traffico passa (al mese) dagli ingress controller on-prem del cluster OCP TITULUS.
+A10 on EC2
+Installazione su macchine EC2 di batterie di LB A10. Tempi di deployment lunghi ed eventuale tema licensing.
+Soluzioni che richiedono la gestione dei certificati (su AWS/siti terzi):
+ALB (o cloudfront) + AWS WAF
+Non rispetta il requisito di non dover gestire i certificati anche su AWS.
+Cloudflare
+Bisogna valutare se per poi questa opzione è percorribile. In questo caso cloudflare si occuperebbe di gestire la whitelist ed il geofencing.
+ 
+Vorremmo quindi capire insieme a voi quale soluzione mettere in campo per TITULUS ed eventualmente come estenderla a tutti gli altri cluster OCP previsti nei vari stream progettuali.
+Se necessario siamo disponibili a fissare una call per condividere questi scenari e scegliere la soluzione più adatta alle vostre esigenze.

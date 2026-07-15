@@ -1,0 +1,23 @@
+
+Versione: 1, data: 4 gen 2026, ora: 10:59
+ID implementazione
+AKfycbwvG4MzBQQEP4C2CzA1gSQecYuERouryfclzsIXtMGujW9LptaikH6GjCZk7uVxujfi
+
+Applicazione web
+URL
+https://script.google.com/macros/s/AKfycbwvG4MzBQQEP4C2CzA1gSQecYuERouryfclzsIXtMGujW9LptaikH6GjCZk7uVxujfi/exec
+
+
+
+Il deployment è stato aggiornato.
+Versione: 2, data: 4 gen 2026, ora: 11:04
+ID implementazione
+AKfycbxD-YMUo99z0GFsCEfufzTIGXluibOqYWtGmrKak2K0WAkp1j7AtOOKdXYR4uCQVNaz
+Applicazione web
+URL
+https://script.google.com/macros/s/AKfycbxD-YMUo99z0GFsCEfufzTIGXluibOqYWtGmrKak2K0WAkp1j7AtOOKdXYR4uCQVNaz/exec
+Raccolta
+URL
+https://script.google.com/macros/library/d/1CN5Oqrc9_LudBljqzdYgYZBGKQRjDmUxLvCMU0cGM53q_dSPi4pIn_zm/2
+Per permettere ad altri gruppi e persone di utilizzare questo progetto come una raccolta, condividilo con loro.
+

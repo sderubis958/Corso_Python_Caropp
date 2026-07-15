@@ -1,0 +1,52 @@
+Gli algoritmi adattivi sono algoritmi che modificano il proprio comportamento o i propri parametri in base ai dati di input o alle condizioni del problema, con l’obiettivo di migliorare le prestazioni o l’accuratezza nel tempo.
+Questa adattabilità li rende particolarmente utili in contesti in cui:
+
+I dati cambiano dinamicamente.
+È presente un certo grado di ordine o struttura preesistente.
+Si vuole ottimizzare il tempo di esecuzione o la precisione in base alla situazione reale.
+
+
+🔹 Caratteristiche principali
+
+Autoregolazione: l’algoritmo analizza i dati in ingresso e decide come procedere.
+Efficienza variabile: può essere molto veloce su dati già parzialmente ordinati o strutturati.
+Apprendimento (in alcuni casi): in ambito AI, può aggiornare i propri parametri per migliorare le prestazioni future.
+
+
+🔹 Esempi di algoritmi adattivi
+
+Ordinamento adattivo:
+
+Insertion Sort e Bubble Sort sono più veloci se la lista è quasi ordinata.
+Timsort (usato in Python e Java) rileva sequenze già ordinate e le sfrutta per ridurre il lavoro.
+
+
+Algoritmi di compressione:
+
+Adaptive Huffman Coding aggiorna la codifica man mano che legge i dati.
+
+
+Algoritmi di filtraggio:
+
+Kalman Filter adatta i parametri di stima in base alle misurazioni ricevute.
+
+
+Machine Learning online:
+
+Modelli che aggiornano i pesi in tempo reale con nuovi dati.
+
+
+
+
+🔹 Vantaggi
+
+Maggiore efficienza su dati con struttura preesistente.
+Capacità di adattarsi a condizioni variabili.
+Possibile riduzione del consumo di risorse.
+
+🔹 Svantaggi
+
+Maggiore complessità di implementazione.
+Prestazioni non sempre prevedibili.
+In alcuni casi, overhead computazionale per l’adattamento.
+

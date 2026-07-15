@@ -8,7 +8,7 @@ while True:
     print("4. PROMOSSI/BOCCIATI")
     print("0. USCIRE")
 
-    scelta = int(input("\nInserisci la tua scelta: 1"))
+    scelta = int(input("\nInserisci la tua scelta: "))
 
     if scelta == 1:
         nome = input("Nome: ")
