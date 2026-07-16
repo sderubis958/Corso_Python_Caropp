@@ -41,7 +41,7 @@ for tentativo in range(1, 6):
     if numero > numero_segreto:
         print('📉 Il numero segreto è più piccolo')
             
-    # Se il ciclo termina seza break
-if numero != numero_segreto:
-    print('\n😭 Hai terminato i tentativi.')
-    print('Il numero era', numero_segreto)    
+    # Se il ciclo termina senza break
+    if numero != numero_segreto:
+        print('\n😭 Hai terminato i tentativi.')
+        print('Il numero era', numero_segreto)    

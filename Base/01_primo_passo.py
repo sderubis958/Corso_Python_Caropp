@@ -11,6 +11,6 @@ print("=" *40, '\n')
 print("Concatenazione di stringhe e variabili")
 print("=" *40, '\n')
 
-print("Nome: " nome,  '\n' , "Cognome: " cognome , '\n' , "Età: " eta , '\n' ,  "Stipendio: " stipendio)
-
+print("Nome: ", nome,  '\n' , "Cognome: ", cognome , '\n' , "Età: " , eta , '\n' ,  "Stipendio: " ,stipendio)
+print (r'Nome ==> ', nome, '\nCognome ==> ', cognome, '\netà ==> ', eta, "\nstipendio ", stipendio)
 
