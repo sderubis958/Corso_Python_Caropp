@@ -1,0 +1,48 @@
+
+53, 54 TASK METTERE CINECA 
+mysql macchina= MYSQL306a, MYSQL306b, MYSQL306c (task 53)
+
+54 = finire frase con CLUSTER 
+
+Buongiorno,
+riporto per comodità alcune azioni concordate nel SAL di progetto per concludere la requisitazione. Ci servono le info a stretto giro.
+ 
+Oracle
+Security group
+È necessario definire le regole di ingress  identificando chi deve chiamare i database, poiché il traffico in egress è già considerato libero. Necessario riportare le regole firewall nel file (link)   [AP: Paolo Sardo / Enrico Maria Biagi]
+MySQL
+Security group
+Regole perimetrali per MySQL [AP: Riccardo Gardini]
+MongoDB
+Necessario anche per MongoDB, recuperare le firewall rules che potrebbero essere distribuite tra iptables, load balancer e regole firewall perimetrali [AP: Paolo Sardo]
+Openshift
+[messaggio venerdì]
+...l'installazione di MySQL per ambo ambienti è stata fatta, confermare che da lunedì si possano prendere in carico questi task di installazione applicativa su Openshift? E' necessario anche sapere se, oltre al database aperto, servono i dati; se no dobbiamo attendere Romanelli Carmine che completi quel task in preprod (
+AP:  Alessandro Callipo Stefano Guidotti Simone Giuliani Fabio Trigari)
+VM IaaS
+Esito ingaggio Link.it i oggi Lunedì 23/02 [AP: Alessandro Callipo]
+Security e connettività
+Riportare in tab Firewall rules di AWS_Inventory_v1.xlsx tutte le ACL interne ognuno per propria competenza  (ACL di macchina, di load balancer) [AP: Cineca]
+(IN ALTERNATIVA RIPORTARCI DUMP DELLE COMMUNICATION MATRIX ESISTENTI)
+Esportare regole Cloudflare [AP: Luca Mattarozzi]
+
+Marco Barattini 
+
+
+No, ho verificato e il telnet funziona.. 
+Il problema è quello che vi dicevo ieri, la ora220 per andare sulla 10.51.45.182 utilizza la eth0 mentre dovrebbe usare la eth1 (designata per FSX).
+ 
+Paolo Sardo te lo conferma questo comando 
+telnet -b 10.51.44.201 10.51.45.182 2049
+ 
+significa che la raggiungibilità c'è.
+ 
+Le soluzioni sono due :
+(non la consiglierei) mount dichiarando che si fa dall'ip della seconda scheda di rete:
+mount -t nfs -o vers=4,clientaddr=10.51.44.201 10.51.45.182:/export/path /mnt/nfs
+cambiare il routing sulla macchina in modo che per quella rotta esca dalla eth1
+ 
+[root@ora220b ~]# ps ax | grep mount
+218396 ?        Ss     0:00 /sbin/mount.nfs 10.51.45.182:/FSXORA01_ORADUMP_03 /tempdump -o rw,nfsvers=3,bg,tcp,rsize=65536,wsize=65536,hard,timeo=600
+ 
+Feb 26 12:41:32 ora220b mount[218394]: mount to NFS server '10.51.45.182' failed: timed out, retrying 
