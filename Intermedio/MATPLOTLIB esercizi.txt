@@ -1,0 +1,148 @@
+Blocco 12 siamo esentati
+
+per attivare il "venv" ==>> .venv\Scripts\activate
+
+
+promossi = df[df['voti'] >= 9]   (code)
+promossi
+
+media_voti = df['voti'].mean()   # (mean = media
+print("\nMedia dei voti:", media_voti)
+
+<h3><i>Calcolare la media</i><h3> (markdown)
+
+df.info() 
+<class 'pandas.DataFrame'>
+RangeIndex: 10 entries, 0 to 9
+Data columns (total 2 columns):
+ #   Column  Non-Null Count  Dtype
+---  ------  --------------  -----
+ 0   nomi    10 non-null     str  
+ 1   voti    10 non-null     int64
+dtypes: int64(1), str(1)
+memory usage: 292.0 bytes
+
+df.info() è un metodo della libreria pandas usato sui DataFrame. Quando viene eseguito, mostra un riepilogo della struttura del dataset, indicando il numero di righe e colonne, il nome di ogni colonna, il tipo di dati contenuto in ciascuna colonna, il numero di valori non nulli e l’uso di memoria.
+
+Questa funzione è molto utile per capire rapidamente se il dataset contiene valori mancanti, se alcune colonne hanno tipi di dati inattesi e qual è la dimensione complessiva del DataFrame. È spesso usata nelle fasi iniziali dell’analisi dei dati, prima di pulire o trasformare il dataset.
+
+print (df.describe())
+
+voti
+count  10.000000
+mean    7.700000
+std     2.162817
+min     4.000000
+25%     6.250000
+50%     8.000000
+75%     9.750000
+max    10.000000
+
+le funzione di aggregazione del DataFrame()
+count  => somma 
+mean   => media
+min    => minimo
+max    => massimo
+
+pip install matplotlib
+pip install open
+
+mport pandas as pd
+import matplotlib.pyplot as plt
+
+dipendenti = {
+    "nome": ["Mario", "Rudy", "Marco", "Luca", "Giovanni", "Francesco", "Giulia", "Elena", "Federica", "Alessandro"],
+    "cognome": ["Ricci", "Botosso", "Secci", "Bianchi", "Neri", "Rossi", "Verdi", "Gialli", "Blu", "Rosa"],
+    "email": ["mario.ricci@example.info", None, "marco.secci@example.com", None, "giovanni.neri@example.com", "francesco.rossi@example.ue", "giulia.verdi@example.com", "elena.gialli@example.it", "federica.blu@example.com", "alessandro.rosa@example.info"],
+    "eta": [30, 54, 54, 28, 35, 42, 28, 32, 29, 31],
+    "citta": ["Milano", "Biella", "San Donà di Piave", "Roma", "Napoli", "Torino", "Firenze", "Bologna", "Genova", "Padova"],
+    "stipendio": [2000, 3000, 1500, 2500, 3500, 4000, 2500, 3000, 3500, 4000],
+    "ruolo": ["Sviluppatore", "Project Manager", "Analista", "Sviluppatore", "Team Leader", "Project Manager", "Sviluppatore", "Analista", "Team Leader", "Project Manager"],
+    "data_assunzione": ["2015-01-15", "2010-06-30", "2018-09-01", "2016-03-20", "2012-11-05", "2008-04-10", "2017-07-25", "2014-02-18", "2013-12-12", "2009-08-01"]
+}
+
+df = pd.DataFrame(dipendenti)
+df
+
+
+
+percorso_file_excel = r'C:\Users\sderu\Documents\Corsi\MAW - Data Analyst + Python\Corso Completo di PYTHON\Intermedio\Data\dipendenti_01.xlsx'
+df.to_excel(percorso_file_excel, index=False)
+
+# Grafico a barre: Stipendi per dipendenti (markdown)
+
+select Nome, Stipendio from Dipendenti where Dipendentid = 2
+(finestra = code, uso di matplotlib, grafico a barre verticali)
+plt.figure(figsize=(12, 6))  # dimensione della finestra
+plt.bar(df['nome'], df['stipendio']) # Select nome, stipendio from Dipendenti
+plt.show() # visualizza il grafico
+
+
+select Nome, Stipendio from Dipendenti where Dipendentid = 2
+(finestra = code, uso di matplotlib, grafico a barre orizzontali)
+plt.figure(figsize=(12, 6))  # dimensione della finestra
+plt.barh(df['nome'], df['stipendio']) # Select nome, stipendio from Dipendenti
+plt.show() # visualizza il grafico
+
+#select Nome, Stipendio from Dipendenti where Dipendentid = 2
+#(finestra = code, uso di matplotlib, grafico a barre verticali)
+plt.figure(figsize=(12, 6))  # dimensione della finestra
+plt.title('Stioendio dei Dipendenti') ## etichetta del grafico
+plt.bar(df['nome'], df['stipendio']) # Select nome, stipendio from Dipendenti
+plt.xlabel('Nome')   # nome dell'asse X
+plt.ylabel('Stipendio in €')  # nome dell'asse Y
+plt.show() # visualizza il grafico
+
+#select Nome, Stipendio from Dipendenti where Dipendentid = 2
+#(finestra = code, uso di matplotlib, grafico a barre verticali)
+plt.figure(figsize=(12, 6))  # dimensione della finestra
+plt.title('Stipendi dei Dipendenti') ## etichetta del grafico
+plt.bar(df['nome'], df['stipendio'], color='red') # Select nome, stipendio from Dipendenti colore delle barre
+plt.xlabel('Nome')   # nome dell'asse X
+plt.ylabel('Stipendio in €')  # nome dell'asse Y
+plt.show() # visualizza il grafico
+
+#select Nome, Stipendio from Dipendenti where Dipendentid = 2
+#(finestra = code, uso di matplotlib, grafico a barre verticali)
+plt.figure(figsize=(12, 6))  # dimensione della finestra
+plt.title('Stipendio dei Dipendenti') ## etichetta del grafico
+plt.bar(df['nome'], df['stipendio'], color='red') # Select nome, stipendio from Dipendenti
+plt.xlabel('Nome')   # nome dell'asse X
+plt.ylabel('Stipendio in €')   # nome dell'asse Y
+plt.xticks(rotation=45)   # rotazione dei nomi dell'asse X
+plt.yticks(rotation=45)   # rotazione dei nomi dell'asse Y
+plt.show() # visualizza il grafico
+ ***************************
+ GRAFICO A TORTA
+ ***************************
+ conteggio_ruoli = df['ruolo'].value_counts()
+
+plt.figure(figsize=(12, 6))
+plt.pie(conteggio_ruoli)
+plt.show
+
+conteggio_ruoli = df['ruolo'].value_counts()
+
+plt.figure(figsize=(12, 6))
+plt.pie(conteggio_ruoli, labels=conteggio_ruoli.index, autopct="%1.2f%%", startangle=90)
+plt.show
+
+## plt.xlabel('Nome')   # nome dell'asse X
+
+conteggio_ruoli = df['ruolo'].value_counts()
+
+plt.figure(figsize=(12, 6))
+plt.title('Distribuzione dei Ruoli') ## etichetta del grafico
+plt.pie(conteggio_ruoli, labels=conteggio_ruoli.index, autopct="%1.2f%%", startangle=90)
+plt.show
+
+## plt.xlabel('Nome')   # nome dell'asse X
+
+
+plt.figure(figsize=(12, 6))
+
+plt.hist(df['eta'], bins=5, color='blue')
+plt.title('-------')
+plt.xlabel('Età')
+plt.ylabel('Frequenza')
+plt.show()
