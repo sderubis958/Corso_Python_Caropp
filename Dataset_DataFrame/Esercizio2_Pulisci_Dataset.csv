@@ -1,0 +1,21 @@
+Data;Importo;Tipo;Nome;;;;;;;;;;;;Etichette di riga;Somma di Importo
+01/01/2021;486,00;Assicurazioni;Silvio;;;;;;;;;;;;Assicurazioni;1376
+02/01/2021;309,00;Rappressentanza;Mario;;;;;;;;;;;;Filippo;444
+03/01/2021;201,00;Ristorante;Marisa;;;;;;;;;;;;Mario;12
+04/01/2021;536,00;Hotel;Teresa;;;;;;;;;;;;Silvio;920
+05/01/2021;354,00;Viaggio;Daniele;;;;;;;;;;;;Hotel;967
+06/01/2021;444,00;Assicurazioni;Filippo;;;;;;;;;;;;Mario;431
+07/01/2021;74,00;Rappressentanza;Angela;;;;;;;;;;;;Teresa;536
+08/01/2021;138,00;Ristorante;Silvio;;;;;;;;;;;;Rappressentanza;383
+09/01/2021;231,00;Hotel;Mario;;;;;;;;;;;;Angela;74
+10/01/2021;111,00;Viaggio;Marisa;;;;;;;;;;;;Mario;309
+11/01/2021;200,00;Hotel;Mario;;;;;;;;;;;;Ristorante;339
+12/01/2021;123,00;Viaggio;Marisa;;;;;;;;;;;;Marisa;201
+13/01/2021;12,00;Assicurazioni;Mario;;;;;;;;;;;;Silvio;138
+14/01/2021;434,00;Assicurazioni;Silvio;;;;;;;;;;;;Viaggio;1088
+15/01/2021;500,00;Viaggio;Filippo;;;;;;;;;;;;Daniele;354
+;;;;;;;;;;;;;;;Filippo;500
+;;;;;;;;;;;;;;;Marisa;234
+;;;;;;;;;;;;;;;(vuoto);
+;;;;;;;;;;;;;;;(vuoto);
+;;;;;;;;;;;;;;;Totale complessivo;4153
